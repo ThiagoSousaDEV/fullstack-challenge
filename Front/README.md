@@ -1,4 +1,4 @@
-# fullstack-challenge
+# fullstack-challenge-front
 
 ## Project setup
 ```
