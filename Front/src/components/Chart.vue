@@ -68,7 +68,7 @@ export default {
     async fetchDataFromAPI() {
       try {
         const response = await axios.get(
-          "https://test-api-backend-gvkw.onrender.com/values"
+          "http://localhost:3000/values"
         );
         const apiData = response.data;
 

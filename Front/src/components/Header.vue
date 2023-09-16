@@ -65,7 +65,7 @@ export default {
       };
       const dataJson = JSON.stringify(data);
       const req = await fetch(
-        "https://test-api-backend-gvkw.onrender.com/values",
+        "http://localhost:3000/values",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

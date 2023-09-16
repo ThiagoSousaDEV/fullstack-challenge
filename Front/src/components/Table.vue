@@ -59,7 +59,7 @@ export default {
   methods: {
     async getValues() {
       const req = await fetch(
-        "https://test-api-backend-gvkw.onrender.com/values"
+        "http://localhost:3000/values"
       );
       const data = await req.json();
       this.values = data;
@@ -67,7 +67,7 @@ export default {
     },
     async deleteValue(id) {
       const req = await fetch(
-        `https://test-api-backend-gvkw.onrender.com/values/${id}`,
+        `http://localhost:3000/values/${id}`,
         {
           method: "DELETE",
         }
