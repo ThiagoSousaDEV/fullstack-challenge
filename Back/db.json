@@ -1,0 +1,34 @@
+{
+    "values": [
+      {
+        "firstname": "Simon",
+        "lastname": "Thomas",
+        "participation": 20,
+        "id": 1
+      },
+      {
+        "firstname": "Ivan",
+        "lastname": "Oliver",
+        "participation": 20,
+        "id": 2
+      },
+      {
+        "firstname": "Jeff",
+        "lastname": "Moore",
+        "participation": 20,
+        "id": 3
+      },
+      {
+        "firstname": "Malcolm",
+        "lastname": "Gilbert",
+        "participation": 20,
+        "id": 4
+      },
+      {
+        "firstname": "Gilbert",
+        "lastname": "Jensen",
+        "participation": 20,
+        "id": 5
+      }
+    ]
+  }
