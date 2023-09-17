@@ -1,5 +1,5 @@
 # fullstack-challenge-back
-## Start database
+## iniciar servidor JSON
 ```
 node server.js
 ```
