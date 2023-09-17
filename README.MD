@@ -25,8 +25,8 @@ Desafio técnico para a vaga de Desenvolvedor da Cotabox
 
 - Deployment
 
-   - Front-end (Netlify) https://fullstack-challenge-cotabox.netlify.app/
-   - Back-end (Render) 
+   - Front-end (Netlify) https://fullstack-challenge-front-cotabox.netlify.app
+   - Back-end (Render) https://fullstack-challenge-back-cotabox.onrender.com
 
 ## Clonar Repositório
 
@@ -61,7 +61,7 @@ npm run serve
 cd back
 ```
 
-### iniciar  servidor JSON
+### iniciar servidor JSON
 
 ```sh
 node server.js
