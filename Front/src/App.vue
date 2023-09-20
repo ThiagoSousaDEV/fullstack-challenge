@@ -1,7 +1,9 @@
 <template>
-  <Header />
-  <Message />
-  <Table />
+  <div>
+    <Header />
+    <Message />
+    <Table />
+  </div>
 </template>
 
 <script>
