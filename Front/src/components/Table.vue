@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <div class="row" v-if="values.length > 0" >
+    <div class="row" v-if="values.length > 0">
       <div
         class="table-responsive-sm col-lg-6"
         style="display: grid; align-items: center"
@@ -32,17 +32,19 @@
       </div>
       <div class="col-lg-2"></div>
       <div class="col-lg-4">
-         <div><Chart /></div>
+        <div><Chart /></div>
       </div>
     </div>
-   <div v-else>
+    <div v-else>
       <p style="text-align: center">There is no data to display</p>
     </div>
   </section>
 </template>
 
 <script>
+import axios from "axios";
 import Chart from "./Chart.vue";
+
 export default {
   name: "Table",
   components: {
@@ -58,24 +60,23 @@ export default {
 
   methods: {
     async getValues() {
-      const req = await fetch(
-        "http://localhost:3000/values"
-      );
-      const data = await req.json();
-      this.values = data;
-      console.log(data);
+      try {
+        const response = await axios.get("http://localhost:3000/values");
+        this.values = response.data;
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error when fetching values:", error);
+      }
     },
     async deleteValue(id) {
-      const req = await fetch(
-        `http://localhost:3000/values/${id}`,
-        {
-          method: "DELETE",
-        }
-      );
-      const res = await req.json();
-      setTimeout(function () {
-        window.location.reload();
-      }, 0);
+      try {
+        await axios.delete(`http://localhost:3000/values/${id}`);
+        setTimeout(function () {
+          window.location.reload();
+        }, 0);
+      } catch (error) {
+        console.error("Error deleting value:", error);
+      }
     },
   },
   mounted() {
@@ -83,6 +84,7 @@ export default {
   },
 };
 </script>
+
 
 <style scoped>
 table {

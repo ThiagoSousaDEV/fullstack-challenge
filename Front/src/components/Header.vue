@@ -42,9 +42,8 @@
   </header>
 </template>
 
-
-
 <script>
+import axios from "axios";
 export default {
   name: "Header",
 
@@ -63,19 +62,18 @@ export default {
         lastname: this.lastname,
         participation: this.participation,
       };
-      const dataJson = JSON.stringify(data);
-      const req = await fetch(
-        "http://localhost:3000/values",
-        {
-          method: "POST",
+
+      try {
+        const response = await axios.post("http://localhost:3000/values", data, {
           headers: { "Content-Type": "application/json" },
-          body: dataJson,
-        }
-      );
-      const res = await req.json();
-      setTimeout(function () {
-        window.location.reload();
-      });
+        });
+        
+        setTimeout(function () {
+          window.location.reload();
+        });
+      } catch (error) {
+        console.error("Erro ao fazer a solicitação POST:", error);
+      }
     },
   },
 };
