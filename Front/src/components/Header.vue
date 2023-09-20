@@ -72,7 +72,7 @@ export default {
           window.location.reload();
         });
       } catch (error) {
-        console.error("Erro ao fazer a solicitação POST:", error);
+        console.error("Error when making POST request:", error);
       }
     },
   },
